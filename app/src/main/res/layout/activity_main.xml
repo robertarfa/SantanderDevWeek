@@ -15,7 +15,9 @@
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/app_name"
+        app:titleTextColor="@color/white" />
 
     <ImageView
         android:layout_width="0dp"
@@ -26,7 +28,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:background="@color/redPrimary"
         />
-    
+
     <TextView
         android:id="@+id/tvUser"
         android:layout_width="wrap_content"
@@ -62,12 +64,13 @@ app:layout_constraintTop_toTopOf="@id/tvAg"
         />
 
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mcvCardSaldo"
         android:layout_width="0dp"
         android:layout_height="200dp"
         app:layout_constraintTop_toBottomOf="@id/tvAg"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-android:layout_marginTop="28dp"
+        android:layout_marginTop="28dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         >
@@ -148,6 +151,8 @@ android:layout_marginTop="28dp"
                 android:background="@android:color/darker_gray"
                 app:layout_constraintTop_toBottomOf="@id/tvSaldoLimite"
                 android:layout_marginTop="20dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="8dp"
                 />
 
             <TextView
@@ -164,5 +169,166 @@ android:layout_marginTop="28dp"
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mvcSquareCard1"
+        android:layout_width="105dp"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toBottomOf="@id/mcvCardSaldo"
+        app:layout_constraintStart_toStartOf="@id/mcvCardSaldo"
+        app:layout_constraintEnd_toStartOf="@id/mvcSquareCard2"
+        android:layout_margin="16dp"
+        android:elevation="8dp"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivCreditCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_credit_card_black_24dp"
+                app:layout_constraintBottom_toBottomOf="@id/tvPagar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvPagar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_pagar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivCreditCard" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mvcSquareCard2"
+        android:layout_width="105dp"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toBottomOf="@id/mcvCardSaldo"
+        app:layout_constraintStart_toEndOf="@id/mvcSquareCard1"
+        app:layout_constraintEnd_toStartOf="@id/mvcSquareCard3"
+        android:layout_margin="16dp"
+        android:elevation="8dp"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivTransferir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_payments_black_24dp"
+                app:layout_constraintBottom_toBottomOf="@id/tvTransferir"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvTransferir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_transferir"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivTransferir" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mvcSquareCard3"
+        android:layout_width="105dp"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toBottomOf="@id/mcvCardSaldo"
+        app:layout_constraintStart_toEndOf="@id/mvcSquareCard2"
+        app:layout_constraintEnd_toEndOf="@id/mcvCardSaldo"
+        android:layout_margin="16dp"
+        android:elevation="8dp"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivRecarga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_charging_station_black_24dp"
+                app:layout_constraintBottom_toBottomOf="@id/tvRecarga"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvRecarga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_recarga"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivRecarga" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <ImageView
+        android:id="@+id/ivCardNumber"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@id/mvcSquareCard2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/redPrimary"
+        android:layout_margin="16dp"
+        />
+
+    <TextView
+        android:id="@+id/tvCardFinal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_cartao_final"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="@id/ivCardNumber"
+        app:layout_constraintBottom_toBottomOf="@id/ivCardNumber"
+        app:layout_constraintStart_toStartOf="@id/ivCardNumber"
+        android:layout_margin="16dp"
+        />
+
+    <TextView
+        android:id="@+id/tvCardFinalValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0007"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/tvCardFinal"
+        app:layout_constraintBottom_toBottomOf="@id/tvCardFinal"
+        app:layout_constraintStart_toEndOf="@id/tvCardFinal"
+        android:layout_margin="16dp"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_expand_more_black_24dp"
+        app:layout_constraintTop_toTopOf="@id/tvCardFinal"
+        app:layout_constraintEnd_toEndOf="@id/ivCardNumber"
+        android:layout_marginRight="16dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,19 +3,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     >
+
     <item android:id="@+id/item_1"
         android:title="menu_1"
-        app:showAsAction="never"
-        />
-
-    <item android:id="@+id/item_2"
-        android:title="menu_2"
-        app:showAsAction="never"
-        />
-
-    <item android:id="@+id/item_3"
-        android:title="menu_3"
-        android:icon="@drawable/ic_launcher_foreground"
+        android:icon="@drawable/ic_notifications_black_24dp"
         app:showAsAction="ifRoom"
         />
 </menu>
